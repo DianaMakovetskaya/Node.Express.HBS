@@ -9,7 +9,7 @@ app.get('/hello',(req, res) => {
     res.end();
 })
 
-app.use(express.json);
+app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.use(express.static(path.join(__dirname,'static')));
@@ -33,7 +33,7 @@ app.get('/login', (req, res) => {
 })
 app.post('/login', (req, res) => {
     console.log('----------------------------')
-    // users.push(req.body);
+    users.push(req.body);
      console.log(users);
     console.log('----------------------------')
 
